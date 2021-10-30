@@ -10,7 +10,7 @@ send "@123Chaitu@123Chaitu\r"
 interact '
 
 expect -c '
-spawn sudo sh -c "echo \"chaitanya ALL=(ALL)	ALL\" >> /etc/sudoers"
+spawn sudo sh -c "echo \"chaitanya ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers"
 expect "*assword*"
 send "@123Chaitu@123Chaitu\r"
 interact '
