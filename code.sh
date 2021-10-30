@@ -14,3 +14,8 @@ spawn sudo sh -c "echo \"chaitanya ALL=(ALL)	ALL\" >> /etc/sudoers"
 expect "*assword*"
 send "@123Chaitu@123Chaitu\r"
 interact '
+
+cat >> ~/.bashrc <<END
+PS1="\w -> "
+export PS1
+END
