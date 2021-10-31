@@ -4,7 +4,7 @@
 # -----------------------------------------------------------
 
 expect -c '
-spawn sudo sh -c "sed  -i \"s/PasswordAuthentication yes/PasswordAuthentication no/ ; s/#PubkeyAuthentication yes/PubkeyAuthentication yes/\" /etc/ssh/sshd_config"
+spawn sudo sh -c "sed  -i \"s/#PermitRootLogin yes/PermitRootLogin without-password/\" /etc/ssh/sshd_config"
 expect "*assword*"
 send "@123Chaitu@123Chaitu\r"
 interact '
