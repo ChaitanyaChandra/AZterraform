@@ -30,4 +30,12 @@ resource "null_resource" "copy_execute" {
     destination = "~/.ssh/authorized_keys"
   }
 
+  
+  provisioner "remote-exec" {
+    inline = [
+      "sudo mkdir /root/.ssh",
+      "sudo cp ~/.ssh/authorized_keys /root/.ssh/authorized_keys",
+    ]
+  }
+
 }
